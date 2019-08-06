@@ -256,7 +256,7 @@ class Assistant
      */
     public function checkUserIsUnBind(int $userId):bool
     {
-        return EellyClient::request('store/assistant', __FUNCTION__, false, $userIds);
+        return EellyClient::request('store/assistant', __FUNCTION__, false, $userId);
     }
 
     /**
