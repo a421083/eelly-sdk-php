@@ -283,6 +283,11 @@ class OrderStat implements OrderStatInterface
         return EellyClient::requestJson('order/orderStat', __FUNCTION__, ['buyerIds' => $buyerIds]);
     }
 
+    public static function getBuyerOrderStat(array $buyerIds): array
+    {
+        return EellyClient::requestJson('order/orderStat', __FUNCTION__, ['buyerIds' => $buyerIds]);
+    }
+
     /**
      * @return self
      */
