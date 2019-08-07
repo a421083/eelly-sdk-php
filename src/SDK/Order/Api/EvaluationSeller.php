@@ -97,6 +97,11 @@ class EvaluationSeller
         return EellyClient::request('order/evaluationSeller', __FUNCTION__, true, $orderId, $data);
     }
 
+    public static function getStoreEvaluationBatch(array $storeIds)
+    {
+        return EellyClient::requestJson('order/evaluationSeller', __FUNCTION__, ['storeIds' => $storeIds]);
+    }
+
     /**
      * @return self
      */
