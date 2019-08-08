@@ -208,6 +208,11 @@ class UserInfo
         return EellyClient::requestJson('user/userInfo', __FUNCTION__, ['userIds' => $userIds]);
     }
 
+    public static function getAdminListByUserIds(array $userIds): array
+    {
+        return EellyClient::requestJson('user/userInfo', __FUNCTION__, ['userIds' => $userIds]);
+    }
+
     /**
      * @return self
      */
