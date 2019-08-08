@@ -99,6 +99,6 @@ class StoreExtras
      */
     public function saveStoreExtrasData(array $data, array $storeIds)
     {
-        return EellyClient::request('eellyOldCode/store/saveStoreExtrasData', __FUNCTION__, true, $data, $storeIds);
+        return EellyClient::request('eellyOldCode/store/storeExtras', __FUNCTION__, true, $data, $storeIds);
     }
 }
