@@ -89,4 +89,16 @@ class StoreExtras
             'fields'   => $fields,
         ]);
     }
+
+    /**
+     * 更新店铺额外数据
+     *
+     * @param array $data 要更新的数据
+     * @param array $storeIds 店铺id
+     * @return void
+     */
+    public function saveStoreExtrasData(array $data, array $storeIds)
+    {
+        return EellyClient::request('eellyOldCode/store/saveStoreExtrasData', __FUNCTION__, true, $data, $storeIds);
+    }
 }
