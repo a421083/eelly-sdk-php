@@ -78,6 +78,11 @@ class AppletCreateQrCode
         return EellyClient::request('live/appletCreateQrCode', 'getWxACodeUnLimit', true, $data);
     }
 
+    public function getWxACodeUnLimitBatch(array $data): array
+    {
+        return EellyClient::request('live/appletCreateQrCode', __FUNCTION__, true, $data);
+    }
+
     /**
      * 生成二维码：【接口B：适用于需要的码数量极多的业务场景】.
      *
