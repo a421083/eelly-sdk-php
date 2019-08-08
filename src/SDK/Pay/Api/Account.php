@@ -919,6 +919,19 @@ class Account
     }
 
     /**
+     * @param array  $storeIds
+     * @param string $fieldScope
+     * @return array
+     * @throws \ErrorException
+     * @author zhangyangxun
+     * @since 2019/8/8
+     */
+    public static function getAccountInfoBatch(array $storeIds, string $fieldScope = 'base'): array
+    {
+        return EellyClient::requestJson('pay/account', __FUNCTION__, ['storeIds' => $storeIds, 'fieldScope' => $fieldScope]);
+    }
+
+    /**
      * @return self
      */
     public static function getInstance(): self
