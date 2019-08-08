@@ -386,7 +386,6 @@ class Store
     /**
      * 获取运费模板物流方式列表 - 卖家v1.3
      *
-     * @param int $storeId 店铺id
      * @return array
      *
      * @author liangzhiwei
@@ -394,8 +393,8 @@ class Store
      *
      * @since 2019.07.22
      */
-    public function distributionStyleList(int $storeId)
+    public function distributionStyleList()
     {
-        return EellyClient::request('eellyOldCode/store/store', __FUNCTION__, true, $storeId);
+        return EellyClient::request('eellyOldCode/store/store', __FUNCTION__, true);
     }
 }
