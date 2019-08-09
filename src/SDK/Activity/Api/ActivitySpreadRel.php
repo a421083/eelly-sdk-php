@@ -55,6 +55,11 @@ class ActivitySpreadRel
         ]);
     }
 
+    public function preparePosterAsync(int $userId)
+    {
+        EellyClient::requestJson('activity/activitySpreadRel', __FUNCTION__, ['userId' => $userId]);
+    }
+
     /**
      * @return self
      */
