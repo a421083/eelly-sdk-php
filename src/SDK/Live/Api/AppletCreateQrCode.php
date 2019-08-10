@@ -103,6 +103,21 @@ class AppletCreateQrCode
     }
 
     /**
+     * 生成二维码（异步预加载）.
+     *
+     * @param array $data
+     * @return bool
+     *
+     * @author wechan
+     *
+     * @since 2018年08月10日
+     */
+    public function getWxACodeAsync(array $data):bool
+    {
+        return EellyClient::request('live/appletCreateQrCode', 'getWxACodeAsync', true, $data);
+    }
+
+    /**
      * @return self
      */
     public static function getInstance(): self
