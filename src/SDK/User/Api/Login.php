@@ -135,6 +135,20 @@ class Login
     }
 
     /**
+     * 根据用户id获取设备号信息
+     *
+     * @param int $userId
+     * @return array
+     *
+     * @author wechan
+     * @since 2019年08月22日
+     */
+    public function getUserDeviceByUserId(int $userId):array
+    {
+        return EellyClient::requestJson('user/login', __FUNCTION__, ['userId' => $userId]);
+    }
+
+    /**
      * @return self
      */
     public static function getInstance(): self
