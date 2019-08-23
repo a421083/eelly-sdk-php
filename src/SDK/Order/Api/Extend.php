@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Eelly\SDK\Order\Api;
 
+use Eelly\SDK\EellyClient;
 use Eelly\SDK\Order\Service\ExtendInterface;
 
 /**
@@ -34,7 +35,7 @@ class Extend
      */
     public function getOrderExtend(int $orderId): array
     {
-        return EellyClient::requestJson('order/order', __FUNCTION__, [
+        return EellyClient::requestJson('order/extend', __FUNCTION__, [
             'orderId' => $orderId,
         ]);
     }
