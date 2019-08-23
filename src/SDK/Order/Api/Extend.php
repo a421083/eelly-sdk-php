@@ -21,6 +21,25 @@ use Eelly\SDK\Order\Service\ExtendInterface;
 class Extend
 {
     /**
+     * 根据订单id，获取订单扩展信息
+     *
+     * @param int $orderId 订单id
+     *
+     * @throws \Eelly\SDK\Order\Exception\OrderException
+     *
+     * @return array
+     * @author wechan
+     *
+     * @since 2019年08月22日
+     */
+    public function getOrderExtend(int $orderId): array
+    {
+        return EellyClient::requestJson('order/order', __FUNCTION__, [
+            'orderId' => $orderId,
+        ]);
+    }
+
+    /**
      * @return self
      */
     public static function getInstance(): self
