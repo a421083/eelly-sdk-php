@@ -2728,6 +2728,25 @@ class Order
     }
 
     /**
+     * 获取指定店铺最新提交的订单列表.
+     *
+     * @param array $storeIds 店铺id
+     * @param int   $limit    限制条数
+     *
+     * @return array
+     *
+     * @author wechan
+     * @since  2019年08月29日
+     */
+    public function getNewOrderByStoreIds(array $storeIds, int $limit = 100): array
+    {
+        return EellyClient::requestJson('order/order', __FUNCTION__, [
+            'storeIds' => $storeIds,
+            'limit' => $limit,
+        ]);
+    }
+
+    /**
      * @return self
      */
     public static function getInstance(): self
